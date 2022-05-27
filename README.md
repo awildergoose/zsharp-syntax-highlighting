@@ -12,10 +12,6 @@ Syntax highlighting for numbers, functions, other keywords
 
 No syntax highlighting when doing `number + number`
 
-## Release Notes
-
-Inital release
-
 ### 1.0.0
 
 Initial release of ZSharp syntax highlighting
