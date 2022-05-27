@@ -1,0 +1,104 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ZSharp",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#paren-expression"
+		},
+		{
+			"include": "#hexadecimal_numbers"
+		},
+		{
+			"include": "#octal_numbers"
+		},
+		{
+			"include": "#binary_numbers"
+		},
+		{
+			"include": "#decimal_numbers"
+		},
+		{
+			"include": "#line_comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.zs",
+				"match": "\\b(if|while|return|func)\\b"
+			},
+			{
+				"name":	"variable.name",
+				"match": "\\b(Sprite|Vec2|ZSharp|Sin|Cos|Tan|Sigmoid|Tanh|Round|Lerp|Abs|RadToDeg|DegToRad|Clamp|SetPixel|Printl|Draw|NSprite|NVec2|GetKey|print|PI|EulersNum)\\b"
+			}
+		]
+
+		},
+		"strings": {
+			"name": "string.quoted.double.zs",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.zs",
+					"match": "\\\\."
+				},
+				{
+					"name": "string.quoted.double.zs",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [{
+						"include": "#escaped_char"
+					}]
+				},
+				{
+					"name": "string.quoted.single.zs",
+					"begin": "'",
+					"end": "'",
+					"patterns": [{
+						"include": "#escaped_char"
+					}]
+				}
+			]
+		},
+		"paren-expression": {
+		  "begin": "\\(",
+		  "end": "\\)",
+		  "beginCaptures": {
+			"0": { "name": "punctuation.paren.open" }
+		  },
+		  "endCaptures": {
+			"0": { "name": "punctuation.paren.close" }
+		  },
+		  "name": "expression.group",
+		  "patterns": [{ "include": "#expression" }]
+		},
+        "hexadecimal_numbers": {
+            "name": "constant.numeric.hexadecimal",
+            "match": "\\b0x[0123456789ABCDEFabcdef]*(\\.[0123456789ABCDEFabcdef]*)?\\b"
+        },
+        "octal_numbers": {
+            "name": "constant.numeric.octal",
+            "match": "\\b0o[01234567]*(\\.[01234567]*)?\\b"
+        },
+        "binary_numbers": {
+            "name": "constant.numeric.octal",
+            "match": "\\b0b[01]*(\\.[01]*)?\\b"
+        },
+        "decimal_numbers": {
+            "name": "constant.numeric.decimal",
+            "match": "\\b[0123456789]*(\\.[0123456789]*)?\\b"
+        },
+        "line_comments": {
+            "name": "comment.line.double-slash",
+            "match": "//[^\\n]*\n"
+        }
+	},
+	"scopeName": "source.zsharp"
+}

@@ -1,0 +1,25 @@
+{
+    "name": "zsharp",
+    "displayName": "ZSharp",
+    "description": "ZSharp",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.67.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "zs",
+            "aliases": ["ZSharp", "zs"],
+            "extensions": ["zs"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "zs",
+            "scopeName": "source.zsharp",
+            "path": "./syntaxes/zs.tmLanguage.json"
+        }]
+    }
+}
