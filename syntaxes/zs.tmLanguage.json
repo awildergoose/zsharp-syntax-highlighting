@@ -35,7 +35,7 @@
 			},
 			{
 				"name":	"variable.name",
-				"match": "\\b(Sprite|Vec2|ZSharp|Sin|Cos|Tan|Sigmoid|Tanh|Round|Lerp|Abs|RadToDeg|DegToRad|Clamp|SetPixel|Printl|Draw|NSprite|NVec2|GetKey|print|PI|EulersNum)\\b"
+				"match": "\\b(global|string|int|Sprite|Vec2|ZS|Sin|Cos|Tan|Sigmoid|Tanh|Round|Lerp|Abs|RadToDeg|DegToRad|Clamp|SetPixel|Printl|Draw|NSprite|NVec2|GetKey|print|PI|EulersNum)\\b"
 			}
 		]
 
