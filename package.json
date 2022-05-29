@@ -3,7 +3,7 @@
     "displayName": "ZSharp",
     "description": "This is used to get some syntax highlighting for ZSharp, it was made in a day, so it's not perfect, but it works.",
     "publisher": "StevenRafft",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.67.0"
     },
